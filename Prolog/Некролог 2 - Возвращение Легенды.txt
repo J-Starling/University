@@ -1,0 +1,17 @@
+p(X,[H|T]):- X=H, !; p(X,T).
+
+set([]).
+set([H|T]):- not(p(H,T)), set(T).
+
+in([],_,[]).
+in([H|T],B,[H|T1]):- set([H|T]), set(B), p(H,B), in(T,B,T1), !. 
+in([_|T],B,C):- in(T,B,C).
+
+dif([],_,[]).
+dif([H|T],B,C):- p(H,B), dif(T,B,C), !.
+dif([H|T],B,[H|C]):- set([H|T]), set(B), dif(T,B,C).
+
+sdif(A,B,C):- set(A), set(B), dif(A, B, C1), dif(B, A, C2), append(C1, C2, C).
+
+sub([],_).
+sub([H|T],B):- set([H|T]), set(B), p(H,B), sub(T,B).
