@@ -1,0 +1,1 @@
+valid.email@example.com, abc.example.com (no @), a@b@c@example.com (multiple @), a"b(c)d,e:f;g<h>i[j\k]l@example.com (invalid chars), just"not"right@example.com (bad quotes), long1234567890123456789012345678901234567890123456789012345678901234+x@example.com (too long), underscores@not_allowed_here.com, another.valid@test.org.
