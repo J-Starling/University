@@ -1,0 +1,13 @@
+begin code
+
+procedure HelloWorld;
+begin
+    writeln("Hello, invalid!");
+end;
+
+end code
+begin code
+
+print('Hello, invalid!')
+
+end code
